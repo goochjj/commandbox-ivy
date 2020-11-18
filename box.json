@@ -1,0 +1,37 @@
+{
+    "name":"commandbox-ivy",
+    "version":"1.0.0",
+    "author":"Joseph Gooch",
+    "location":"forgeboxStorage",
+    "homepage":"https://github.com/goochjj/commandbox-ivy",
+    "documentation":"https://github.com/goochjj/commandbox-ivy",
+    "repository":{
+        "type":"git",
+        "URL":"https://github.com/goochjj/commandbox-ivy"
+    },
+    "bugs":"https://github.com/goochjj/commandbox-ivy/issues",
+    "slug":"commandbox-ivy",
+    "shortDescription":"CommandBox command for running ivy",
+    "description":"CommandBox command for running ivy",
+    "type":"commandbox-modules",
+    "dependencies":{
+        "ivy-2.5.0":"jar:https://repo1.maven.org/maven2/org/apache/ivy/ivy/2.5.0/ivy-2.5.0.jar"
+    },
+    "devDependencies":{},
+    "installPaths":{
+        "ivy-2.5.0":"lib/ivy/"
+    },
+    "scripts":{
+        "onRelease":"publish",
+        "postPublish":"!git push && !git push --tags",
+        "format":"cfformat run commands,models,*.cfc",
+        "format:check":"cfformat check commands,models,*.cfc",
+        "format:watch":"cfformat watch commands,models,*.cfc ./.cfformat.json"
+    },
+    "ignore":[
+        "**/.*",
+        "tests",
+        "examples"
+    ],
+    "contributors":[]
+}

@@ -1,0 +1,9 @@
+.dropbox
+lib
+.vscode
+/cache
+/reports
+/deps
+/lib
+/ivy.xml
+
